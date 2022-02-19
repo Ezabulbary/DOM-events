@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+<body>
+    <section id="top-bubble">
+        <h4>Bubble and propagetion</h4>
+        <ul id="semi-bubble">
+            <li>Lorem, ipsum.</li>
+            <li id="second-li">Iusto, totam.</li>
+            <li>Quos, tempore!</li>
+            <li>Maiores, sed.</li>
+            <li>Voluptatem, voluptatibus!</li>
+            <li>Voluptates, saepe!</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('second-li').addEventListener('click', function(event){
+            console.log('second1 li clicked');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('second-li').addEventListener('click', function(event){
+            console.log('second2 li clicked');
+        })
+        document.getElementById('second-li').addEventListener('click', function(event){
+            console.log('second3 li clicked');
+            event.stopPropagation();
+        })
+        
+        // ul 
+        document.getElementById('semi-bubble').addEventListener('click', function(){
+            console.log('ul clicked')
+        })
+        
+        // section 
+        document.getElementById('top-bubble').addEventListener('click', function(){
+            console.log('secrtion clicked')
+        })
+    </script>
+</body>
+</html>

@@ -32,3 +32,14 @@ function makeGoldenRod() {
 
 // 6th way 
 
+const hotPinkButton = document.getElementById('make-hotpink-button');
+
+hotPinkButton.addEventListener('click', function () {
+    document.body.style.backgroundColor = 'HotPink';
+})
+
+// 7th way shortcut
+
+document.getElementById('make-lightblue-button').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'LightBlue';
+})

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Click Niye Clickbazi</h1>
+    </header>
+    <main>
+        <!-- 1st way -->
+        <button onclick="document.body.style.backgroundColor='yellow'">Click Me: Yellow</button>
+        <!-- 2nd way -->
+        <button onclick="makeRed()">Click Me: Red</button>
+        <!-- 3rd way -->
+        <button id="make-blue-button">Click Me: Blue</button>
+        <!-- 4th way -->
+        <button id="make-green-button">Click Me: Green</button>
+        <!-- 5th way -->
+        <button id="make-goldenrod-button">Click Me: Golden</button>
+        <!-- 6th way -->
+        <button id="make-hotpink-button">Click Me: Blue</button>
+        <!-- 7th way -->
+        <!-- <button id="make-blue-button">Click Me: Blue</button> -->
+    </main>
+    <script src="js/event.js"></script>
+    <script>
+        const hotPinkButton = document.getElementById('make-hotpink-button');
+        hotPinkButton.addEventListener('clik', function(){
+            document.body.style.backgroundColor = 'HotPink';
+        })
+    </script>
+</body>
+</html>

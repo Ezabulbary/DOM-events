@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Of DOM</title>
+</head>
+<body>
+    <h1 id="mouse-move">This is My Moveing Mouse</h1>
+
+    <input id="email-field" type="text" placeholder="Type Your Email">
+    <button onclick="oneClickToGreen()">Click ME: Green</button>
+
+    <script>
+        function oneClickToGreen(){
+            document.body.style.backgroundColor = 'green';
+        };
+        // keyup
+        document.getElementById('email-field').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        });
+        // mouseover
+        document.getElementById('mouse-move').addEventListener('mouseover', function(){
+            console.log('mouse is moving');
+        });
+
+        // mouseenter
+        document.getElementById('mouse-move').addEventListener('mouseenter', function(){
+            console.log('mouse is entering');
+        });
+
+        // mouseout
+        document.getElementById('mouse-move').addEventListener('mouseout', function(){
+            console.log('mouse is out');
+        });
+    </script>
+</body>
+</html>
